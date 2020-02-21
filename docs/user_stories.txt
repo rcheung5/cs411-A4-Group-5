@@ -1,0 +1,10 @@
+1. 	Every user need to log in with their google account. After logging in
+   	the user will be able to access the search page which is our home page. The 
+   	search page is where the user searches for food recommendetion. If the log in
+   	is unseccessful, then show an error page.
+2. 	After logging in, we will show the users the search page which will have different
+	features to search for food based on the criteria: cuisine type, price range and ETA. 
+	After the criteria is entered, we will make an API call to the Yelp services and will
+	present the list of dishes along with the name of the restaurent to the users.  
+3. 	Lastly, we will have an "add to your favourites", we can make use of user authentication 
+ 	and allow users to add meals into their favourites list.
