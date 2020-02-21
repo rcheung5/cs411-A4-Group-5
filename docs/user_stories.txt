@@ -6,5 +6,6 @@
 	features to search for food based on the criteria: cuisine type, price range and ETA. 
 	After the criteria is entered, we will make an API call to the Yelp services and will
 	present the list of dishes along with the name of the restaurent to the users.  
-3. 	Lastly, we will have an "add to your favourites", we can make use of user authentication 
- 	and allow users to add meals into their favourites list.
+3. 	Lastly, we will have an "favourites", we can make use of user authentication 
+ 	and allow users to add meals into their favourites list. We will also have a different
+	page for "favourites" which will show their favourite list of meals.
