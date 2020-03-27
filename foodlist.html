@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<h2>Restaurants</h2>
+{% for biz in business_data['businesses'] %}
+   {{biz['name']}}<br>
+{% endfor %}
+{% endblock %}
