@@ -9,8 +9,7 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = 'asifrichrah'
 
 
-
-#Search form that will take in cuisine ('term' parameter) and city ('location' parameter) from user
+# Search form that will take in cuisine ('term' parameter) and city ('location' parameter) from user
 @app.route('/', methods=['GET', 'POST'])
 def search():
     form = SearchForm()
@@ -22,15 +21,15 @@ def search():
         headers = {'Authorization': 'Bearer %s' % api_key}
         url = 'https://api.yelp.com/v3/businesses/search'
 
-       #make call to Yelp API
+        # make call to Yelp API
         result = requests.get(url, params=params, headers=headers)
 
-        #Convert the JSON string into a dictionary
+        # Convert the JSON string into a dictionary
         business_data = result.json()
 
         return render_template('foodlist.html', business_data=business_data)
-
-    return render_template('searchbar.html', form=form)
+    else:
+        return render_template('searchbar.html', form=form)
 
 
 if __name__ == '__main__':
