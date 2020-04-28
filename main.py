@@ -133,8 +133,10 @@ def main():
     input_values = parser.parse_args()
 
     try:
-        query_api(input_values.term, input_values.location)
+        get_business(API_KEY, "E8RJkjfdcwgtyoPMjQ_Olg")
+        # query_api(input_values.term, input_values.location)
     except HTTPError as error:
+
         sys.exit(
             'Encountered HTTP error {0} on {1}:\n {2}\nAbort program.'.format(
                 error.code,
