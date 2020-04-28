@@ -16,7 +16,8 @@ def search():
     if form.is_submitted():
         cuisine_r = request.form['cuisine']
         loc_r = request.form['location']
-        params = {'term': cuisine_r, 'location': loc_r}
+        price_r = request.form['price']
+        params = {'term': cuisine_r, 'location': loc_r, 'price': price_r, 'sort_by': "distance", 'limit': 5}
         api_key = '4OT8ngau2AxIlDyHvrRAugyNpXP8BnXdSGvCDz9pzt6-c8Ff2XIKZNlNpYRFCFSuzJSSkUPYpvKJEqViA0LbclqZKjRe950k37zR73wTLl58060tR5yqcjY_QG15XnYx'
         headers = {'Authorization': 'Bearer %s' % api_key}
         url = 'https://api.yelp.com/v3/businesses/search'
